@@ -30,6 +30,11 @@ class ScheduleDay extends Model
         return $this->belongsTo('App\ScheduleUser');
     }
 
+    public function physicalExam()
+    {
+        return $this->hasOne('App\PhysicalExam');
+    }
+
     // Al crear la cita se agrega el id del usuario activo
     public static function boot()
     {

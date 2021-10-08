@@ -41,6 +41,10 @@ class PhysicalExam extends Model
     {
         return $this->belongsTo('App\User');
     }
+    public function scheduleDay()
+    {
+        return $this->belongsTo('App\ScheduleDay');
+    }
 
     // Al registrar el examen fisico se agrega el id del usuario activo
     public static function boot()
