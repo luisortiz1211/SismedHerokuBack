@@ -23,7 +23,7 @@ class ScheduleUserPolicy
      */
     public function viewAny(User $user)
     {
-        return $user->isGranted(User::ROLE_ASISTENT);
+        return $user->isGranted(User::ROLE_ASSISTENT);
     }
 
     /**
@@ -35,7 +35,7 @@ class ScheduleUserPolicy
      */
     public function view(User $user, ScheduleUser $scheduleUser)
     {
-        return $user->isGranted(User::ROLE_ADMIN);
+        return $user->isGranted(User::ROLE_ASSISTENT);
     }
 
     /**
@@ -59,7 +59,7 @@ class ScheduleUserPolicy
     public function update(User $user, ScheduleUser $scheduleUser)
     {
         //return $user->id === $scheduleUser->user_id;
-        return $user->isGranted(User::ROLE_ADMIN) ;
+        return $user->isGranted(User::ROLE_ASSISTENT) ;
     }
 
     /**

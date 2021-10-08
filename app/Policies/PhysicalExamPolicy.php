@@ -35,7 +35,7 @@ class PhysicalExamPolicy
      */
     public function view(User $user, PhysicalExam $physicalExam)
     {
-        return $user->isGranted(User::ROLE_ASISTENT);
+        return $user->isGranted(User::ROLE_ASSISTENT);
     }
 
     /**
@@ -46,7 +46,7 @@ class PhysicalExamPolicy
      */
     public function create(User $user)
     {
-        return $user->isGranted(User::ROLE_ASISTENT);
+        return $user->isGranted(User::ROLE_ASSISTENT);
     }
 
     /**
@@ -58,7 +58,7 @@ class PhysicalExamPolicy
      */
     public function update(User $user, PhysicalExam $physicalExam)
     {
-        return $user->isGranted(User::ROLE_ASISTENT);
+        return $user->isGranted(User::ROLE_ASSISTENT);
     }
 
     /**

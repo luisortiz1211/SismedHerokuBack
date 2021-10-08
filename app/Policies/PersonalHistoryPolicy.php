@@ -35,7 +35,7 @@ class PersonalHistoryPolicy
      */
     public function view(User $user, PersonalHistory $personalHistory)
     {
-        return $user->isGranted(User::ROLE_ASISTENT);
+        return $user->isGranted(User::ROLE_ASSISTENT);
     }
 
     /**
@@ -46,7 +46,7 @@ class PersonalHistoryPolicy
      */
     public function create(User $user)
     {
-        return $user->isGranted(User::ROLE_ASISTENT);
+        return $user->isGranted(User::ROLE_ASSISTENT);
     }
 
     /**
@@ -58,7 +58,7 @@ class PersonalHistoryPolicy
      */
     public function update(User $user, PersonalHistory $personalHistory)
     {
-        return $user->isGranted(User::ROLE_ASISTENT);
+        return $user->isGranted(User::ROLE_ASSISTENT);
     }
 
     /**

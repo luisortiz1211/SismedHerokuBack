@@ -36,7 +36,7 @@ class EmergencyContactPolicy
      */
     public function view(User $user, EmergencyContact $emergencyContact)
     {
-        return $user->isGranted(User::ROLE_ASISTENT);
+        return $user->isGranted(User::ROLE_ASSISTENT);
     }
 
     /**
@@ -47,7 +47,7 @@ class EmergencyContactPolicy
      */
     public function create(User $user)
     {
-        return $user->isGranted(User::ROLE_ASISTENT);
+        return $user->isGranted(User::ROLE_ASSISTENT);
     }
 
     /**
@@ -59,7 +59,7 @@ class EmergencyContactPolicy
      */
     public function update(User $user, EmergencyContact $emergencyContact)
     {
-        return $user->isGranted(User::ROLE_ASISTENT);
+        return $user->isGranted(User::ROLE_ASSISTENT);
     }
 
     /**

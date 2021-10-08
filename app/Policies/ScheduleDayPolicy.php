@@ -25,7 +25,7 @@ class ScheduleDayPolicy
      */
     public function viewAny(User $user)
     {
-        //return $user->isGranted(User::ROLE_ASISTENT);
+        //return $user->isGranted(User::ROLE_ASSISTENT);
         return true;
     }
 
@@ -38,7 +38,7 @@ class ScheduleDayPolicy
      */
     public function view(User $user, ScheduleDay $scheduleDay)
     {
-        return $user->isGranted(User::ROLE_ASISTENT);
+        return $user->isGranted(User::ROLE_ASSISTENT);
     }
 
     /**
@@ -49,7 +49,7 @@ class ScheduleDayPolicy
      */
     public function create(User $user)
     {
-        return $user->isGranted(User::ROLE_ASISTENT);
+        return $user->isGranted(User::ROLE_ASSISTENT);
     }
 
     /**
@@ -62,7 +62,7 @@ class ScheduleDayPolicy
     public function update(User $user, ScheduleDay $scheduleDay)
     {
         //return $user->id === $scheduleDay->user_id;
-        return $user->isGranted(User::ROLE_ASISTENT);
+        return $user->isGranted(User::ROLE_ASSISTENT);
     }
 
     /**
@@ -74,7 +74,7 @@ class ScheduleDayPolicy
      */
     public function delete(User $user, ScheduleDay $scheduleDay)
     {
-        return $user->isGranted(User::ROLE_ASISTENT);
+        return $user->isGranted(User::ROLE_ASSISTENT);
     }
 
     /**

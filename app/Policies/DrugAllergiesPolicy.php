@@ -36,7 +36,7 @@ class DrugAllergiesPolicy
      */
     public function view(User $user, DrugAllergies $drugAllergies)
     {
-        return $user->isGranted(User::ROLE_ASISTENT);
+        return $user->isGranted(User::ROLE_ASSISTENT);
     }
 
     /**
@@ -47,7 +47,7 @@ class DrugAllergiesPolicy
      */
     public function create(User $user)
     {
-        return $user->isGranted(User::ROLE_ASISTENT);
+        return $user->isGranted(User::ROLE_ASSISTENT);
     }
 
     /**
@@ -59,7 +59,7 @@ class DrugAllergiesPolicy
      */
     public function update(User $user, DrugAllergies $drugAllergies)
     {
-        return $user->isGranted(User::ROLE_ASISTENT);
+        return $user->isGranted(User::ROLE_ASSISTENT);
     }
 
     /**
@@ -71,7 +71,7 @@ class DrugAllergiesPolicy
      */
     public function delete(User $user, DrugAllergies $drugAllergies)
     {
-        return $user->isGranted(User::ROLE_ASISTENT);
+        return $user->isGranted(User::ROLE_ASSISTENT);
     }
 
     /**

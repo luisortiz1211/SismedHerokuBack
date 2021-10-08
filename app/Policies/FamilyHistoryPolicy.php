@@ -36,7 +36,7 @@ class FamilyHistoryPolicy
      */
     public function view(User $user, FamilyHistory $familyHistory)
     {
-        return $user->isGranted(User::ROLE_ASISTENT);
+        return $user->isGranted(User::ROLE_ASSISTENT);
     }
 
     /**
@@ -47,7 +47,7 @@ class FamilyHistoryPolicy
      */
     public function create(User $user)
     {
-        return $user->isGranted(User::ROLE_ASISTENT);
+        return $user->isGranted(User::ROLE_ASSISTENT);
     }
 
     /**
@@ -59,7 +59,7 @@ class FamilyHistoryPolicy
      */
     public function update(User $user, FamilyHistory $familyHistory)
     {
-        return $user->isGranted(User::ROLE_ASISTENT);
+        return $user->isGranted(User::ROLE_ASSISTENT);
     }
 
     /**
@@ -71,7 +71,7 @@ class FamilyHistoryPolicy
      */
     public function delete(User $user, FamilyHistory $familyHistory)
     {
-        return $user->isGranted(User::ROLE_ASISTENT);
+        return $user->isGranted(User::ROLE_ASSISTENT);
     }
 
     /**

@@ -35,7 +35,7 @@ class PatientPolicy
      */
     public function view(User $user, Patient $patient)
     {
-        return $user->isGranted(User::ROLE_ASISTENT);
+        return $user->isGranted(User::ROLE_ASSISTENT);
     }
 
     /**
@@ -46,7 +46,7 @@ class PatientPolicy
      */
     public function create(User $user)
     {
-        return $user->isGranted(User::ROLE_ASISTENT);
+        return $user->isGranted(User::ROLE_ASSISTENT);
     }
 
     /**
@@ -58,7 +58,7 @@ class PatientPolicy
      */
     public function update(User $user, Patient $patient)
     {
-        //return $user->isGranted(User::ROLE_ASISTENT);
+        //return $user->isGranted(User::ROLE_ASSISTENT);
         return true;
     }
 
