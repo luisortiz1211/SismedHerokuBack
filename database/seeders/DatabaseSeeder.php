@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
     {
         Schema::disableForeignKeyConstraints();
         $this->call(UsersTableSeeder::class);
-         $this->call(PatientsTableSeeder::class);
+        /* $this->call(PatientsTableSeeder::class);
         $this->call(ScheduleUsersTableSeeder::class);
         $this->call(ScheduleDaysTableSeeder::class);
         $this->call(EmergencyContactsTableSeeder::class);
@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
         $this->call(PhysicalExamsTableSeeder::class);
         $this->call(ExplorationPatientsTableSeeder::class);
         $this->call(DrugsRecipiesTableSeeder::class);
-        $this->call(ImageRecipiesTableSeeder::class); 
+        $this->call(ImageRecipiesTableSeeder::class); */ 
         Schema::enableForeignKeyConstraints();
     }
 }
