@@ -31,7 +31,7 @@ class AddScheduleDayColumnPhysicalExam extends Migration
     public function down()
     {
         Schema::disableForeignKeyConstraints();
-        Schema::dropIfExists('physical_exam');
+        Schema::dropIfExists('physical_exams');
         Schema::enableForeignKeyConstraints();
     }
 }
