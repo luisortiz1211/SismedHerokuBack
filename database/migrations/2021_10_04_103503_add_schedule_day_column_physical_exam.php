@@ -13,13 +13,13 @@ class AddScheduleDayColumnPhysicalExam extends Migration
      */
     public function up()
     {
-        Schema::table('physical_exams', function (Blueprint $table) {
-            $table->unsignedBigInteger('schedule_day');
+        Schema::table('schedule_days', function (Blueprint $table) {
+            $table->unsignedBigInteger('schedule_id');
             $table
-                ->foreign('schedule_day')
+                ->foreign('schedule_id')
                 ->references('id')
-                ->on('schedule_days')
-                ->onDelete('restrict');
+                ->on('schedule_users')
+                ->onDelete('set null');
         });
     }
 
@@ -31,7 +31,7 @@ class AddScheduleDayColumnPhysicalExam extends Migration
     public function down()
     {
         Schema::disableForeignKeyConstraints();
-        Schema::dropIfExists('physical_exams');
+        Schema::dropIfExists('schedule_days');
         Schema::enableForeignKeyConstraints();
     }
 }
