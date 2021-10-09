@@ -23,7 +23,7 @@ class PatientPolicy
      */
     public function viewAny(User $user)
     {
-        return $user->isGranted(User::ROLE_ASISTENT);
+        return $user->isGranted(User::ROLE_ASSISTENT);
     }
 
     /**
