@@ -42,14 +42,14 @@ class ScheduleUserController extends Controller
     // mostrar los horarios de un usuario en especifico
     public function show(ScheduleUser $scheduleUser)
     {
-        $this->authorize('view', $scheduleUser);
+        $this->authorize('viewAny', $scheduleUser);
         return response()->json(new ScheduleUserResource($scheduleUser), 200);
     }
 
     //mostrar horarios de usuario
     public function showScheduleUser(User $user, ScheduleUser $scheduleUser)
     {
-       $this->authorize('view', $scheduleUser);
+       $this->authorize('viewAny', $scheduleUser);
         User::class;
         $user = $scheduleUser->where('user_id', $user['id'])->get();
         return response()->json(new ScheduleUserCollection($user), 200);
@@ -57,7 +57,7 @@ class ScheduleUserController extends Controller
     //Crear un horario usuario
     public function store(Request $request, ScheduleUser $scheduleUser)
     {
-        //$this->authorize('create', ScheduleUser::class);
+        $this->authorize('create', ScheduleUser::class);
         $request->validate(self::$rules, self::$messages);
         $scheduleUser = new ScheduleUser($request->all());
         $scheduleUser->save();
