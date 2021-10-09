@@ -23,7 +23,7 @@ class UsersTableSeeder extends Seeder
         // conviene hacerlo antes del for para que el seeder
         // no se vuelva lento.
         $password = Hash::make('123123');
-        $admin =Admin::create(['credential_number' =>'123456789']);
+        $admin =Admin::create(['ci' =>'123456789','employment'=>'Asistente Medico']);
 
         $admin->user()->create([
             'name' => 'Administrador',

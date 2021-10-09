@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Admin extends Model
 {
-    protected $fillable =['credential_number'];
+    protected $fillable =['ci','employment'];
     public $timestamps = false;
     public function user()
      {

@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
         $this->call(PhysicalExamsTableSeeder::class);
         $this->call(ExplorationPatientsTableSeeder::class);
         $this->call(DrugsRecipiesTableSeeder::class);
-        $this->call(ImageRecipiesTableSeeder::class); */ 
+        $this->call(ImageRecipiesTableSeeder::class); */
         Schema::enableForeignKeyConstraints();
     }
 }

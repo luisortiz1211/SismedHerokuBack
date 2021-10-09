@@ -85,7 +85,8 @@ class UserController extends Controller
             ]);
         }else{
             $userable = Admin::create([
-                'credential_number' => $request->get('credential_number'),
+                'ci' => $request->get('ci'),
+                'employment' => $request->get('employment'),
             ]);
         }
         $user = $userable->user()->create([
