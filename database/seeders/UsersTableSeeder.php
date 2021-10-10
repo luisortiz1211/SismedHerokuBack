@@ -23,19 +23,19 @@ class UsersTableSeeder extends Seeder
         // conviene hacerlo antes del for para que el seeder
         // no se vuelva lento.
         $password = Hash::make('123123');
-        $admin =Admin::create(['ci' =>'123456789','employment'=>'Asistente Medico']);
+        $admin =Admin::create(['ci' =>'1714423322','employment'=>'Asistente Medico']);
 
         $admin->user()->create([
             'name' => 'Administrador',
             'lastName' => 'Admin',
-            'email' => 'admin@prueba.com',
+            'email' => 'elv1a_su@hotmail.com',
             'availableStatus' => '1',
             'password' => $password,
             'roleUser'=>'ROLE_ADMIN'
        ]);
         // Generar algunos usuarios para nuestra aplicacion
         //$num_user = 3;
-        for ($i = 0; $i < 2; $i++) {
+       /*  for ($i = 0; $i < 2; $i++) {
             $assistent = Assistent::create([
                 'ci'=>$faker->isbn13,
                 'employment'=>$faker->catchPhrase,
@@ -65,6 +65,6 @@ class UsersTableSeeder extends Seeder
                 ]);
             }
             
-        }
+        } */
     }
 }
