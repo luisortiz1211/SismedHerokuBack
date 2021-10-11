@@ -24,7 +24,7 @@ class DrugAllergiesPolicy
      */
     public function viewAny(User $user)
     {
-        return $user->isGranted(User::ROLE_ADMIN);
+        return $user->isGranted(User::ROLE_ASSISTENT);
     }
 
     /**
@@ -77,7 +77,6 @@ class DrugAllergiesPolicy
     /**
      * Determine whether the user can restore the drug allergies.
      *
-     * @param  \App\User  $user
      * @param  \App\DrugAllergies  $drugAllergies
      * @return mixed
      */

@@ -23,7 +23,7 @@ class DrugsRecipiePolicy
      */
     public function viewAny(User $user)
     {
-        return $user->isGranted(User::ROLE_ADMIN);
+        return $user->isGranted(User::ROLE_ASSISTENT);
     }
 
     /**
@@ -35,7 +35,7 @@ class DrugsRecipiePolicy
      */
     public function view(User $user, DrugsRecipie $drugsRecipie)
     {
-        return $user->isGranted(User::ROLE_MEDIC);
+        return $user->isGranted(User::ROLE_ASSISTENT);
     }
 
     /**

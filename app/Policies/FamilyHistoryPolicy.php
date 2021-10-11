@@ -24,7 +24,7 @@ class FamilyHistoryPolicy
      */
     public function viewAny(User $user)
     {
-        return $user->isGranted(User::ROLE_ADMIN);
+        return $user->isGranted(User::ROLE_ASSISTENT);
     }
 
     /**
