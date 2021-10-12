@@ -46,7 +46,7 @@ class ExplorationPatientPolicy
      */
     public function create(User $user)
     {
-        return $user->isGranted(User::ROLE_MEDIC);
+        return $user->isGranted(User::ROLE_ASSISTENT);
     }
 
     /**

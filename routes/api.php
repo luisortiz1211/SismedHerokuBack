@@ -47,7 +47,7 @@ Route::group(['middleware' => ['jwt.verify']], function () {
     Route::get('patients/{patient}/physical_exams', 'App\\Http\\Controllers\\PatientController@showPhysicalExams');
     Route::get('patients/{patient}/exploration_patients', 'App\\Http\\Controllers\\PatientController@showExplorationPatient');
     Route::get('patients/{patient}/image_recipies', 'App\\Http\\Controllers\\PatientController@showImageRecipies');
-    Route::get('patients/{patient}/drugs_recipies', 'App\\Http\\Controllers\\PatientController@showDrugsRecipies');
+    //Route::get('patients/{patient}/drugs_recipies', 'App\\Http\\Controllers\\PatientController@showDrugsRecipies');
     //Route::delete('patients/{patient}', 'PatientController@delete');
 
     //----------Rutas pacientes agendados-----------------------------
@@ -116,8 +116,11 @@ Route::group(['middleware' => ['jwt.verify']], function () {
     //-----------Rutas exploraciones a pacientes-----------------------------
     //Route::get('exploration_patients', 'ExplorationPatientController@index');
     Route::get('exploration_patients/{exploration_patient}', 'App\\Http\\Controllers\\ExplorationPatientController@show');  
-    Route::post('patients/{patient}/exploration_patients', 'App\\Http\\Controllers\\ExplorationPatientController@store');
+    //Route::post('patients/{patient}/exploration_patients', 'App\\Http\\Controllers\\ExplorationPatientController@store');
+    Route::post('physical_exams/{physical_exam}/exploration_patients', 'App\\Http\\Controllers\\ExplorationPatientController@store');
     
+
+
     Route::get('physical_exams/{physical_exam}/exploration_patients', 'App\\Http\\Controllers\\PhysicalExamController@showExplorationPatients');
 
     Route::get('physical_exams/{physical_exam}/exploration_patients/{exploration_patient}', 'App\\Http\\Controllers\\PhysicalExamController@showOnePhysicalExploration');
@@ -135,8 +138,9 @@ Route::group(['middleware' => ['jwt.verify']], function () {
     Route::get('patients/{patient}/image_recipies/{image_recipie}', 'App\\Http\\Controllers\\ImageRecipieController@showImagePatient');
     Route::put('patients/{patient}/image_recipies/{image_recipie}', 'App\\Http\\Controllers\\ImageRecipieController@updateImagePatient');
     Route::get('exploration_patients/{exploration_patient}/image_recipies', 'App\\Http\\Controllers\\ExplorationPatientController@showExploreImage');
+    Route::post('exploration_patients/{exploration_patient}/image_recipies', 'App\\Http\\Controllers\\ImageRecipieController@store');
     
-    Route::post('patients/{patient}/image_recipies', 'App\\Http\\Controllers\\ImageRecipieController@store');
+    //Route::post('patients/{patient}/image_recipies', 'App\\Http\\Controllers\\ImageRecipieController@store');
     
 
     Route::get('exploration_patients/{exploration_patient}/image_recipies/{image_recipie}', 'App\\Http\\Controllers\\ImageRecipieController@showOnePatientImage');
@@ -151,12 +155,12 @@ Route::group(['middleware' => ['jwt.verify']], function () {
     Route::get('patients/{patient}/drugs_recipies/{drugs_recipie}', 'App\\Http\\Controllers\\DrugsRecipieController@updateDrugsRecipiePatient');
     Route::get('exploration_patients/{exploration_patient}/drugs_recipies', 'App\\Http\\Controllers\\ExplorationPatientController@showExploreDrugs');
     Route::post('exploration_patients/{exploration_patient}/drugs_recipies', 'App\\Http\\Controllers\\DrugsRecipieController@store');
-    Route::get('exploration_patients/{exploration_patient}/drugs_recipies/{drugs_recipie}', 'App\\Http\\Controllers\\DrugsRecipieController@showOnePatientDrugs');
+    //Route::get('exploration_patients/{exploration_patient}/drugs_recipies/{drugs_recipie}', 'App\\Http\\Controllers\\DrugsRecipieController@showOnePatientDrugs');
     Route::put('exploration_patients/{exploration_patient}/drugs_recipies/{drugs_recipie}', 'App\\Http\\Controllers\\DrugsRecipieController@update');
     Route::get('users/{user}/drugs_recipies', 'App\\Http\\Controllers\\DrugsRecipieController@showDrugsRecipie');
     Route::delete('exploration_patients/{exploration_patient}/drugs_recipies/{ddrugs_recipie}', 'App\\Http\\Controllers\\DrugsRecipieController@delete');
 
-    Route::post('patients/{patient}/drugs_recipies', 'App\\Http\\Controllers\\DrugsRecipieController@store');
+    //Route::post('patients/{patient}/drugs_recipies', 'App\\Http\\Controllers\\DrugsRecipieController@store');
    
     //-----------Horartios de usuarios-----------------------------
     Route::get('schedule_users', 'App\\Http\\Controllers\\ScheduleUserController@index');

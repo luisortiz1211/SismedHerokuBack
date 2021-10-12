@@ -20,11 +20,12 @@ class DrugsRecipie extends JsonResource
         return [
             'patient_id'=>$this->patient_id,
             'drugsRecipie_id' =>$this ->id,
-            'exploration_id' => $this->exploration_id,
+            'physicalExam_id' => $this->physicalExam_id,
             'coddrug' => $this->coddrug,
             'nameDrugRecipie' => $this->nameDrugRecipie,
             'user_id' => $this->user_id,
             'created_at'=>$this->created_at,
+            'exploration_id'=>$this->exploration_id,
         ];
     }
 }
