@@ -88,8 +88,13 @@ class PatientController extends Controller
     public function index()
     {
         //$this->authorize('view',Patient::class);
-        return new PatientCollection(Patient::paginate(10));
+        return new PatientCollection(Patient::paginate(20));
     }
+  //mostrar todos los pacientes
+  public function showAll()
+  {
+      return new PatientCollection(Patient::all());
+  }
     //mostrar paciente id
     public function show(Patient $patient)
     {
