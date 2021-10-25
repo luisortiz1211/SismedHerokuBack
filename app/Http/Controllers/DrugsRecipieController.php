@@ -36,7 +36,7 @@ class DrugsRecipieController extends Controller
     }
     public function show(DrugsRecipie $drugsRecipie)
     {
-        //$this->authorize($drugsRecipie);
+        $this->authorize($drugsRecipie);
         return response()->json(new DrugsRecipieResource($drugsRecipie), 200);
     }
 
