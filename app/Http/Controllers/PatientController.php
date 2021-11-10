@@ -183,6 +183,11 @@ class PatientController extends Controller
         $patient = DB::table('patients')->where('ci', 'like', '%' . $patientSearch . '%')->get();
         return response()->json(new PatientCollection($patient), 201);
     }
+
+    // buscar un paciente
+    public function search($patient){
+        return Patient::where('ci','like',"%$patient%")->get();
+    }
     //crear un paciente
     public function store(Request $request, Patient $patient)
     {

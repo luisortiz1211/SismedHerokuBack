@@ -41,9 +41,6 @@ class ScheduleDayController extends Controller
         return new ScheduleDayCollection(ScheduleDay::all());
     }
 
-
-
-
     // muestra las agendas de un usuario
     public function show(ScheduleDay $scheduleDay)
     {
