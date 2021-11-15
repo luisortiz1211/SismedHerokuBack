@@ -208,7 +208,7 @@ class UserController extends Controller
     {
         /* $this->authorize('update', $user);
         $user = Auth::user();
-         */$request->validate(self::$rules);
+         $request->validate(self::$rules);*/
         $user->update($request->all());
         return response()->json($user, 200);
     }
